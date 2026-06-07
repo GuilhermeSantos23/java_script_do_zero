@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" type="image/x-icon">
+    <style>
+        .conteiner{
+            text-align: center;
+        }
+        input{
+            height: 15px;
+            width: 100px;
+        }
+        button{
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Calculadora com JavaScript</h1>
+    <br>
+    <br>
+    <div class="conteiner">
+    <input id='n1'> + <input id='n2'> 
+    <button onclick='somar()'>Somar</button> 
+    <p id='resultadoSoma'></p>
+    <br>
+    <input id='e1'> - <input id='e2'> 
+    <button onclick='subtrair()'>Subtrair</button> 
+    <p id='resultadoSubtracao'></p>
+    <br>
+    <input id='num1'> x <input id='num2'> 
+    <button onclick='multiplicar()'>Multiplicar</button> 
+    <p id='resultadoMultiplicacao'></p>
+    <br>
+    <input id='o1'> ÷ <input id='o2'> 
+    <button onclick='dividir()'>Dividir</button> 
+    <p id='resultadoDivisao'></p>
+    </div>
+
+<script> 
+function somar() {
+    let a = parseFloat(document.getElementById('n1').value);
+    let b = parseFloat(document.getElementById('n2').value);
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Insira valores válidos!");
+        return;
+    }
+
+    document.getElementById('resultadoSoma').textContent = `Resultado da soma: ${a + b}`;
+}
+function subtrair() {
+    let a = parseFloat(document.getElementById('e1').value);
+    let b = parseFloat(document.getElementById('e2').value);
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Insira valores válidos!");
+        return;
+    }
+
+    document.getElementById('resultadoSubtracao').textContent = `Resultado da subtração: ${a - b}`;
+} 
+function multiplicar() {
+    let a = parseFloat(document.getElementById('num1').value);
+    let b = parseFloat(document.getElementById('num2').value);
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Insira valores válidos!");
+        return;
+    }
+
+    document.getElementById('resultadoMultiplicacao').textContent = `Resultado da multiplicação: ${a * b}`;
+}
+function dividir() {
+    let a = parseFloat(document.getElementById('o1').value);
+    let b = parseFloat(document.getElementById('o2').value);
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Insira valores válidos!");
+        return;
+    }
+
+    document.getElementById('resultadoDivisao').textContent = `Resultado da divisão: ${(a / b).toFixed(2)}`;
+}
+</script> 
+</body>
+</html>

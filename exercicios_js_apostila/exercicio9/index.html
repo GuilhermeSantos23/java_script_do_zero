@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" type="image/x-icon">
+     <style>
+        *{
+            margin: 0;
+            gap: 30px;
+        }
+        #Logo{
+            width: 100px;
+            height: 100px;
+        }
+     </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Exercicio 9</h1>
+    <input type="text" id="entrada">
+    <p id="saida"></p>
+    <br>
+    <br>
+    <p id="texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil, veritatis eius vero non aliquam debitis dolorum quia, animi sunt id laboriosam nulla necessitatibus praesentium sequi iure et, modi deserunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic saepe fugiat repellendus sit culpa tenetur atque. Tempore officia iure aperiam, placeat laborum harum dolore quod sequi? Assumenda nulla recusandae veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vitae omnis fugit eveniet non debitis quasi a qui laboriosam, odio blanditiis delectus fugiat facilis repudiandae illum? Non eveniet quos ab.</p>
+    <br>
+    <br>
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" id="Logo" alt="imagem da logo JavaScript">
+    <br>
+    <br>
+    <button onclick="alteraTexto()"> Clique aqui se quiser alterar o texto</button>
+
+    <script>
+        //1. Faça um botão que, ao ser clicado, mude o texto de um parágrafo. 
+        //2. Capture o texto digitado em um input e mostre em tempo real abaixo dele. 
+        //3. Ao passar o mouse sobre uma imagem, troque sua borda.
+        function alteraTexto(){
+            const paragrafo = document.querySelector("#texto");
+            paragrafo.textContent = "Vó, como cê conseguiu criar três mulheres sozinhaNa época que mulher não valia nada? Menina na cidade grande, no susto viúva E daquela cor que só serve pra ser abusada Você não costurou só roupa, né? Teve que costurar um mundo de trauma, abdicação, luta Pra hoje falar com orgulho Que essa família não tem vagabundo Aprendi no seu colo"
+        }
+
+        const entrada = document.getElementById("entrada");
+        const saida = document.getElementById("saida");
+
+        entrada.addEventListener("input", function() {
+            saida.textContent = entrada.value;
+        });
+
+        const imagem = document.getElementById("Logo");
+
+        imagem.addEventListener("mouseover", function() {
+            imagem.style.border = "5px solid red";
+        });
+        imagem.addEventListener("mouseout", function() {
+            imagem.style.border = "none";
+        });
+
+
+
+
+    </script>
+</body>
+</html>

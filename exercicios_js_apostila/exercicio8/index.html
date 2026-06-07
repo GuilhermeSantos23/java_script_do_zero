@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" type="image/x-icon">
+    <style>
+        .destaque{
+            background-color: black;
+            color: white;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Olá, mundo</h1>
+    <br>
+    <br>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, repellendus expedita. Dolore quasi voluptas eius voluptates maiores, ut beatae illum recusandae, doloribus cum rerum pariatur ab velit sequi nihil maxime.</p>
+    <button id="meuBotao"> Aperte aqui</button>
+
+    <script>
+        //1. Altere o texto de um elemento h1 via JavaScript. 
+        //2. Mude a cor de fundo de um parágrafo ao carregar a página. 
+        //3. Adicione uma classe CSS a um botão existente. 
+        let titulo = document.querySelector("h1"); 
+        titulo.textContent="Atividade 8";
+
+        window.onload = function() {
+        let paragrafo = document.querySelector("p");
+
+        paragrafo.style.backgroundColor = "red";
+        };
+
+        const botao = document.getElementById("meuBotao");
+        botao.classList.add("destaque");
+
+
+    </script>
+</body>
+</html>
